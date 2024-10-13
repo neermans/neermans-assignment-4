@@ -28,7 +28,7 @@ function displayResults(data) {
     
     data.documents.forEach((doc, index) => {
         let docDiv = document.createElement('div');
-        docDiv.innerHTML = `<strong>Document ${data.indices[index] + 1}</strong>: ${doc.text.substring(0, 200)}... <br><strong>Similarity: ${doc.similarity.toFixed(3)}</strong>`;
+        docDiv.innerHTML = `<strong>Document ${data.indices[index] + 1}</strong>: ${doc.text} <br><strong>Similarity: ${doc.similarity.toFixed(3)}</strong>`;
         resultsDiv.appendChild(docDiv);
     });
 }
