@@ -19,7 +19,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.x  
+        python-version: '3.x'  # Ensure Python 3.x is specified precisely
+
+    - name: Verify Python installation
+      run: |
+        python --version
+        pip --version
 
     - name: Install dependencies
       run: make install
@@ -30,4 +35,4 @@ jobs:
         sleep 10
 
     - name: Stop running server
-      run: killall python || true  
+      run: killall python3 || true  # Use python3 to ensure it targets the correct process
