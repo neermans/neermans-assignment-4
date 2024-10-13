@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Search Engine</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Documents</h1>
+        <form id="search-form">
+            <input type="text" id="query" placeholder="Enter search term" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="results" style="display: none;"></div>
+        <canvas id="similarity-chart" style="display: none; max-width: 600px; height: 400px;"></canvas>
+    </div>
+
+    <script src="/static/main.js"></script> <!-- Only include the script once, and here at the end -->
+</body>
+</html>
+

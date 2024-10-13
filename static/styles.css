@@ -1,0 +1,146 @@
+/* Global styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed); /* Blue gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff; /* White text color */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 50px;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 3rem;
+    color: #fff; /* White text for heading */
+    margin-bottom: 30px;
+}
+
+/* Search form styling */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 300px;
+    padding: 15px;
+    border: 2px solid #6dd5ed; /* Light blue border */
+    border-radius: 0; /* Sharp edges */
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+input[type="text"]::placeholder {
+    color: #666;
+}
+
+/* Button styling */
+.btn-search {
+    background-color: #b24592; /* Pink button color */
+    color: white;
+    border: none;
+    border-radius: 0; /* Sharp edges */
+    padding: 15px 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #e052a0; /* Lighter pink on hover */
+}
+
+/* Results section styling */
+#results {
+    display: none;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 0; /* Sharp edges */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #b24592;
+}
+
+/* Result item styling */
+#results div {
+    padding: 15px;
+    background-color: #f8ceec; /* Light pink background */
+    margin-bottom: 10px;
+    border-radius: 0; /* Sharp edges */
+    border-left: 4px solid #b24592;
+    transition: background-color 0.3s ease;
+}
+
+#results div:hover {
+    background-color: #f4accf; /* Lighter pink on hover */
+}
+
+/* Chart styling */
+canvas {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 0; /* Sharp edges */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6dd5ed;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+#similarity-chart {
+    display: none;
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0; /* Sharp edges */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+
+    .btn-search {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
