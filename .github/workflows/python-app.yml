@@ -3,10 +3,10 @@ name: Python Application
 on:
   push:
     branches:
-      - main  
+      - main  # Adjust this to the branch you're working on if needed
   pull_request:
     branches:
-      - main  
+      - main  # Adjust this to the branch you're working on if needed
 
 jobs:
   build:
@@ -19,12 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # Ensure Python 3.x is specified precisely
-
-    - name: Verify Python installation
-      run: |
-        python --version
-        pip --version
+        python-version: 3.9
 
     - name: Install dependencies
       run: make install
@@ -32,7 +27,7 @@ jobs:
     - name: Run the application
       run: |
         make run &
-        sleep 10
+        sleep 5
 
     - name: Stop running server
-      run: killall python3 || true  # Use python3 to ensure it targets the correct process
+      run: killall python || true  
